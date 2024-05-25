@@ -1,20 +1,17 @@
-import React from 'react';
+
 import '../NavigationBar/NavigationBar.css'
 import { Link } from 'react-router-dom';
 
 function NavigationBar() {
     return (
-
+ 
         <nav id='container'>
-            <ul style={{paddingTop: 10, paddingBottom: 10}}>
-                <li className='button'> <Link to="/">Curriculo</Link></li>
-                <li className='button'> <Link to="/Portefolio">Portfólio</Link></li>
-                <li className='button'> <Link to="/Contato">Contato</Link></li>
+            <ul>
+                 <Link className="button" to="/">Curriculo</Link>
+                 <Link className="button" to="/Portefolio">Portfólio</Link>
+                 <Link className="button" to="/Contato">Contato</Link>
             </ul>
-        </nav>
-
-
-
+        </nav> 
     )
 
 

@@ -1,34 +1,42 @@
-import React from 'react';
-
+import '../Curriculo/Curriculo.css'
+import date from '../Curriculo/curriculo.json'
 function Curriculo() {
-    return(
-        <main>
-        
-        <div>
-             <h2>Resumo</h2>
-        
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni beatae nobis consequatur corrupti, quidem voluptatum iste fuga velit qui asperiores! Rem consequatur eos est, veritatis quis quas officia tenetur. Et.</p>
-        </div>
-        
-        <div> 
-            <h2>Acadêmico</h2>
-            
-            <ul>
-                <li>Faculdade De Ciências Sociais Dos Palmares.</li>
-                <li>2013-2017</li>
-                <li>2013-2017</li>
-            </ul>
-        </div>
-        
-        <div> 
-            <h2>Profissional</h2>
-            <ul>
-                <li>Bacharel em Administração</li>
-                <li>Auxiliar Administrativo 2019-2020</li>
-                <li>Administradora e maker 2022-2024</li>
-            </ul>
-        </div>
-    </main>
+    return (
+        <>
+
+            <section id="resumo">
+
+                <h2>Resumo</h2><br />
+
+                <p className="p">{date.Resumo}</p>
+            </section>
+
+
+            <section id="academico">
+
+                <h2>Acadêmico</h2><br />
+
+
+                <p className="p"> <b>{date.faculdade} </b></p> <br />
+                <p className="p"> {date.dataInicio}-{date.dataFim} </p>
+                <p className="p">{date.dataInicio}-{date.dataFim}</p>
+
+
+            </section>
+
+
+            <section id="profissional">
+
+                <h2>Profissional</h2> <br />
+
+                <p className='p'>{date.Bacharel}</p>
+                <p className='p'>{date.Auxiliar}  {date.dataInicioAuxiliar}-{date.dataFimAuxiliar}</p>
+                <p className='p'> {date.maker}  {date.dataInicioMaker}-{date.dataFimMaker}</p>
+
+            </section>
+
+        </>
+
 
 
     )

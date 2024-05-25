@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 import './App.css';
 
@@ -20,7 +20,7 @@ function App() {
         <Routes>
 
           <Route index element={<Curriculo />} />
-          <Route path="Portefolio" element={<Portefolio />} />
+          <Route path="Portefólio" element={<Portefolio />} />
           <Route path="Contato" element={<Contato />} />
 
         </Routes>

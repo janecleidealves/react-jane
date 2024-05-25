@@ -1,5 +1,5 @@
 
-import React from 'react';
+
 
 import './Portefolio.css'
 import janecleide from '../../assets/img.jpeg'
@@ -7,7 +7,7 @@ import janecleide from '../../assets/img.jpeg'
 
     return(
         <header>
-        <div class= "item-portefolio">
+        <div className= "item-portefolio">
         <a herf="https://academy.comeialabs.com.br/" target="_blank"/>
             <img src={janecleide}alt="imagem do face de janecleide" />
             <p> Site Comeia Academy</p>
