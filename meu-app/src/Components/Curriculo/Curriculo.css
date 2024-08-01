@@ -23,3 +23,9 @@ h2{
 .p{
     text-align: left;
 }
+section{
+    margin: 50px;
+    padding: 80px;
+    background-color: #837E7E;
+    border-radius: 30px;
+}

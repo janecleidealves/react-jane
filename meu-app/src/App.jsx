@@ -20,15 +20,15 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   const [informacoes, setInformacoes] = React.useState({});
   const [curriculo, setCurriculo] = React.useState({});
-  const [portfolio, setPortfolio] = React.useState({});
+  const [portfolio, setPortfolio] = React.useState([]);
 
   const fetchDados = async () => {
     try {
       const informacao = await api.get('/informacoes/1');
       setInformacoes({
-        foto: informacoes.data.foto,
-        nome: curriculo.data.nome,
-        cargo: portfolio.data.cargo
+        foto: informacao.data.foto,
+        nome: informacao.data.nome,
+        cargo: informacao.data.cargo
       });
 
       const experienciaAcademica = await api.get('/experiencias?tipo=academica');
@@ -39,6 +39,7 @@ function App() {
         experienciaAcademica: experienciaAcademica.data,
         experienciaProfissional: experienciaProfissional.data
       });
+ 
 
       const portfolio = await api.get('/portfolio');
       setPortfolio(portfolio.data);
@@ -59,7 +60,7 @@ function App() {
       <NavigationBar></NavigationBar>
       <Routes>
         <Route index element={<Curriculo curriculo={curriculo} />} />
-        <Route path='portfolio' element={<Portfolio portfolio={portfolio} />} />
+        <Route path='portefolio' element={<Portfolio portfolio={portfolio} />} />
         <Route path='contato' element={<Contato  />} />
       </Routes>
     </BrowserRouter >
