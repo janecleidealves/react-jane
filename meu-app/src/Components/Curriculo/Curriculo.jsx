@@ -1,6 +1,6 @@
 
 
-import 'Curriculo.module.css'
+
 function Curriculo(props) {
     const { resumo, experienciaAcademica, experienciaProfissional } = props.curriculo;
 
